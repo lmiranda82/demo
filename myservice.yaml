@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
- name: frontend-ui 
+ name: myservice
 spec:
  type: LoadBalancer
  ports:
-   - port: 80 
+   - port: 8080
  selector: 
   app: refcard-demo
