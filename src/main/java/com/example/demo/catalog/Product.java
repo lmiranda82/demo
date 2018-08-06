@@ -2,22 +2,23 @@ package com.example.demo.catalog;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "PRODUCT", uniqueConstraints = @UniqueConstraint(columnNames = "itemId"))
+@Table(name = "PRODUCT", uniqueConstraints = @UniqueConstraint(columnNames = "ITEM_ID"))
 public class Product implements Serializable {
 
     @Id
+    @Column(name="ITEM_ID")
     private String itemId;
 
+    @Column(name="NAME")
     private String name;
 
+    @Column(name="DESCRIPTION")
     private String description;
 
+    @Column(name="PRICE")
     private double price;
 
     public Product() {
